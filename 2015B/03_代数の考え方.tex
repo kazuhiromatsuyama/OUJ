@@ -1,0 +1,158 @@
+\documentclass{jsarticle}
+%\usepackage{textcomp}
+\title{代数の考え方(10)}
+%\author{141-821706-0 松山 和弘}
+\author{142-004814-1 松山 和弘}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{問1}
+
+$a^3+b^3+c^3-3abc$の3根は、
+
+\[ a^3+b^3+c^3-3abc =
+    (a+b+c)(a^2+b^2+c^2-ab-bc-ca) =
+    (a+b+c)(a+b \omega +c \omega^2)(a+b\omega^2 + c\omega )
+\]
+
+\[ 
+    \omega = \frac{-1 + \sqrt{3}i}{2}
+\]
+
+
+\[ 
+    x=-b-c
+\]
+
+\[ 
+    x=-b\omega-c\omega^2
+\]
+
+\[
+    x=-b\omega^2-c\omega
+\]
+
+となる。よって、
+$a^3-3abc+b^3+c^3$を、$x^3+px+q$と比べて
+\[
+    p=-3bc
+\]
+
+\[
+    q=b^3+c^3
+\]
+
+となる$b,c$が決まれば3根がわかる。
+
+\[
+    -3bc=p より、
+\]
+
+\[
+    b^3c^3=-\frac{p^3}{27}
+\]
+
+となる。これは、2次方程式の式と根の関係より、
+
+\[
+    (t-b^3)(t-c^3)=t^2-qt- \frac{p^3}{27}=0
+\]
+となる。これより、$b^3,c^3$についての判別式は、
+
+\[
+  D_{b^3c^3}=27q^2+4p^3
+\]
+
+となる。解は以下となり、平方根中に判別式  $D_{b^3c^3}$ が含まれていることを確認できる。
+
+\[ x=\left(
+ \frac{\sqrt{27\,q^2+4\,p^3}}{2\,3^{\frac{3}{2}}}-\frac{q}{2}\right)
+ ^{\frac{1}{3}}-\frac{p}{3\,\left(\frac{\sqrt{27\,q^2+4\,p^3}}{2\,3^{
+ \frac{3}{2}}}-\frac{q}{2}\right)^{\frac{1}{3}}} 
+\]
+
+
+\[ 
+ x=\left(\frac{\sqrt{3}\,i}{2}- \frac{1}{2}\right)\,
+ \left(\frac{\sqrt{27\,q^2+4\,p^3}}{2\,3^{\frac{3
+ }{2}}}-\frac{q}{2}\right)^{\frac{1}{3}}-\frac{\left(-\frac{\sqrt{3}
+ \,i}{2}-\frac{1}{2}\right)\,p}{3\,\left(\frac{\sqrt{27\,q^2+4\,p^3}
+ }{2\,3^{\frac{3}{2}}}-\frac{q}{2}\right)^{\frac{1}{3}}}
+\]
+
+
+\[
+ x=\left(-\frac{\sqrt{3}\,i}{2}-\frac{1}{2}\right)\,
+ \left(
+ \frac{\sqrt{27\,q^2+4\,p^3}}{2\,3^{\frac{3}{2}}}-\frac{q}{2}\right)
+ ^{\frac{1}{3}}-\frac{\left(\frac{\sqrt{3}\,i}{2}-\frac{1}{2}\right)
+ \,p}{3\,\left(\frac{\sqrt{27\,q^2+4\,p^3}}{2\,3^{\frac{3}{2}}}-
+ \frac{q}{2}\right)^{\frac{1}{3}}}
+\]
+
+判別式$D$は以下となる。
+
+\[
+  D=(-1)^{3(3-1/2)}D_{b^3c^3}=-27q^2-4p^3
+\]
+
+
+
+\section{問2}
+$x^5=1$は、「円周の5等分」問題である。
+オイラーの公式により5箇の根がある。
+
+\[x = \cos 2 \pi \frac{0}{5}+i \sin 2 \pi \frac{0}{5} = 1\]
+
+\[x = \cos 2 \pi \frac{1}{5}+i \sin 2 \pi \frac{1}{5} \]
+
+\[x = \cos 2 \pi \frac{2}{5}+i \sin 2 \pi \frac{2}{5} \]
+
+\[x = \cos 2 \pi \frac{3}{5}+i \sin 2 \pi \frac{3}{5} \]
+
+\[x = \cos 2 \pi \frac{4}{5}+i \sin 2 \pi \frac{4}{5} \]
+
+$ 72^\circ $は、円の$\frac{1}{5}$であるため、 $ \cos72^\circ, \sin72^\circ $ は以下となる。
+
+\[ \cos72^\circ =  \cos 2 \pi \frac{1}{5} \]
+\[ \sin72^\circ =   \sin 2 \pi \frac{1}{5} \]
+
+\section{問3}
+
+\[z = x + iy = (a + bi)^2 = a^2 + 2abi - b^2\]
+
+としたとき、
+
+\[x=a^2-b^2\]
+\[y=2ab\]
+
+となる。
+
+\[x = a^2-b^2 = a^2 - \frac{y^2}{4a^2}  \quad より \quad 4a^4-4xa^2-y^2=0  \]
+
+a,bは、
+
+\[ a^2 = \frac{x\pm \sqrt{x^2+y^2}}{2}\]
+
+\[ a = \pm \frac{\sqrt{x+ \sqrt{x^2+y^2}}}{\sqrt{2}}\]
+
+\[ b = \frac{y}{2a} =
+   \pm \frac{y}{2} \frac{\sqrt{2}}{\sqrt{x+\sqrt{x^2+y^2}}} =
+   \pm \frac{y}{\sqrt{y^2}} \frac{\sqrt{-x+\sqrt{x^2+y^2}}}{\sqrt{2}}
+  \]
+
+となる。
+よって、
+
+\[ \sqrt{z} = \sqrt{x+iy} = a+bi =\pm \frac{\sqrt{x+ \sqrt{x^2+y^2}} + \sqrt{-x+ \sqrt{x^2+y^2}}i}
+  {\sqrt{2}}  \qquad (y>0)\]
+
+
+\[ \sqrt{z} = \sqrt{x+iy} = a+bi= \pm \frac{\sqrt{x+ \sqrt{x^2+y^2}} - \sqrt{-x+ \sqrt{x^2+y^2}}i}
+  {\sqrt{2}}  \qquad (y < 0)\]
+
+となる。
+
+\end{document}
+
